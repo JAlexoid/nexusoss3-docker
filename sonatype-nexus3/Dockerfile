@@ -15,7 +15,6 @@ RUN sed -ibak -e 's#=data#=/data#g' /opt/sonatype/nexus/bin/nexus.vmoptions
 RUN useradd -r -u 200 -m -c "nexus role account" -d /data -s /bin/false nexus
 
 VOLUME /data
-RUN mkdir /data
 RUN chown -R nexus:nexus /opt/sonatype/
 RUN chown -R nexus:nexus /data
 
