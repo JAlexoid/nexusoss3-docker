@@ -2,11 +2,11 @@ FROM       jalexoid/ubuntu-java8:14.04-8u72
 MAINTAINER Aleksandr Panzin <alex@panz.in>
 
 
-ENV NEXUS_VERSION 3.0.0-b2016011501
+ENV NEXUS_VERSION 3.0.0-03
 
 RUN mkdir -p /opt/sonatype/
-RUN wget -v -O nexus-3.0.0-m7-unix.tar.gz  http://download.sonatype.com/nexus/3/nexus-3.0.0-m7-unix.tar.gz
-RUN tar xvzf nexus-3.0.0-m7-unix.tar.gz -C /tmp
+RUN wget -v -O nexus-3.0.0-unix.tar.gz  http://download.sonatype.com/nexus/3/nexus-3.0.0-03-unix.tar.gz
+RUN tar xvzf nexus-3.0.0-unix.tar.gz -C /tmp
 RUN mv /tmp/nexus-${NEXUS_VERSION} /opt/sonatype/nexus && rm -rf /tmp/nexus-${NEXUS_VERSION}
 
 RUN sed -ibak -e 's#=data#=/data#g' /opt/sonatype/nexus/bin/nexus.vmoptions
