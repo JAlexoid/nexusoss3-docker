@@ -1,4 +1,4 @@
-FROM       jalexoid/ubuntu-java8:14.04-8u72
+FROM       jalexoid/ubuntu-java8:14.04-8u92
 MAINTAINER Aleksandr Panzin <alex@panz.in>
 
 
