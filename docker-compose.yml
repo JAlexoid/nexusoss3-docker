@@ -1,7 +1,7 @@
 version: '2'
 services:
   nexus3:
-    image: jalexoid/sonatype-nexus:3.0.0-m7
+    image: jalexoid/sonatype-nexus:3.0.1-01
     ports:
      - "8081:8081"
     volumes:
