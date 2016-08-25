@@ -22,3 +22,10 @@ Or with larger Java heap size
 ```
     docker run -d -p 8081:8081 -e MAX_HEAP=4096M --name nexus-docker -v /data/docker/repository:/data jalexoid/sonatype-nexus:3.0.1-01
 ```
+
+
+# User
+
+Nexus runs with user ID 200, so all external data will have that user ID associated on the filesystem.
+
+`useradd -r -u 200 -m -c "nexus role account" -d /data -s /bin/false nexus`
