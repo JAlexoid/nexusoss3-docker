@@ -9,7 +9,7 @@ RUN wget -v -O nexus-3-unix.tar.gz  http://download.sonatype.com/nexus/3/nexus-$
 RUN tar xvzf nexus-3-unix.tar.gz -C /tmp
 RUN mv /tmp/nexus-${NEXUS_VERSION} /opt/sonatype/nexus && rm -rf /tmp/nexus-${NEXUS_VERSION}
 
-RUN sed -ibak -e 's#=data#=/data#g' /opt/sonatype/nexus/bin/nexus.vmoptions
+RUN sed -ibak -e 's#=../sonatype-work/nexus3#=/data#g' /opt/sonatype/nexus/bin/nexus.vmoptions
 
 
 RUN useradd -r -u 200 -m -c "nexus role account" -d /data -s /bin/false nexus
