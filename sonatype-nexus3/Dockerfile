@@ -1,8 +1,8 @@
-FROM       jalexoid/ubuntu-java8:16.04-8u111
+FROM       jalexoid/ubuntu-java8:16.04-8u131
 MAINTAINER Aleksandr Panzin <alex@panz.in>
 
 
-ENV NEXUS_VERSION 3.1.0-04
+ENV NEXUS_VERSION 3.4.0-02
 
 RUN mkdir -p /opt/sonatype/
 RUN wget -v -O nexus-3-unix.tar.gz  http://download.sonatype.com/nexus/3/nexus-${NEXUS_VERSION}-unix.tar.gz
